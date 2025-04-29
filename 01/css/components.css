@@ -1,0 +1,92 @@
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Seções */
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: var(--tablet)) {
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
